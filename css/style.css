@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif; 
+}
+
+.container{
+    width: 85%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+section{
+    padding: 5rem 0;
+}
+
+.split{
+    display: flex;
+    gap: 2em;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+
+}
+
+.spacing > *+*{
+    margin-top: var(--spacer,2rem);
+}
+
+.btn{
+    text-decoration: none;
+    background-color: rgb(49, 49, 151);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 700;
+    /* font-size: 1rem; */
+    padding: 8px 11px;
+    display: inline-block;
+    transition: transform 250ms ease-in-out,
+                opacity 250ms linear;
+    
+}
+.btn:hover{
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.primary-title{
+    font-size: 4rem;
+    /* font-size: clamp(3rem,calc(5vw+irem),4.5rem); */
+}
+
+.section-title{
+    font-size:3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    
+}
+
+.top{
+    text-align: center;
+    padding: 10rem 0;
+    color: white; 
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/shoe-3.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+
+}
+
+.featured{
+    background-color: #eee;
+}
+
+.featured_item{
+    position: relative;
+    top: 0; left: 0;
+    background-color: cadetblue;
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
+    height: 9em;
+    width: 9em;
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+}
+span{
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.featured_details{
+    opacity: 0;
+    transition: all 250ms linear;
+}
+
+.featured_details:hover{
+    opacity: 1;
+}
+
+.featured_item:hover{
+    transform: scale(1.125);
+}
+
+
+/* main */
+
+
+.product{
+    border: 3px solid red;
+    background: rgb(255, 208, 0);
+    padding: 2em;
+    border-radius: 1em;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.product_title{
+    font-size: 3em;
+    line-height: 1.1;
+    color: white;
+
+}
+
+.shoe1{background-image: radial-gradient(#ff4800,orange);}
+.shoe2{background-image: radial-gradient(orange,yellow);}
+.shoe3{background-image: radial-gradient(#188af5,#00d9ff);}
+
+.product_image{
+    margin: -5em 0 0 0;
+}
+
+@media (min-width: 930px) {
+    .product_title{
+        font-size:5em;
+        margin: 0;
+    }
+    .product{
+        text-align: left;
+        margin-bottom: 9em;
+    }
+    .shoe2{
+        text-align: right;
+    }
+    .product_image{
+      
+        float: right;
+        width: 65%;
+        shape-outside: url(../img/shoe-1.png);
+        shape-margin: 1em;
+        margin: 0 -5em 0 0;
+    }
+    .shoe2 .product_image{
+        float: left;
+        shape-outside: url(../img/shoe-2.png);
+        shape-margin: 2em;
+        margin: 0 0 0 -5em;
+    }
+  
+}
+    
+
+/* css for footer starts here */
+
+
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+
+
+
+
+
